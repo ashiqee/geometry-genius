@@ -67,3 +67,45 @@ function calculateParallelogramArea() {
   const textElement = document.getElementById("parallelogram-area");
   textElement.innerText = parallelogramArea;
 }
+
+//---Rhombus cal---------
+
+function calculateRhombusArea() {
+  const d1 = getInputValue("rhombus-d1");
+
+  const d2 = getInputValue("rhombus-d2");
+
+  //calculate
+
+  const rhombusArea = 0.5 * d1 * d2;
+
+  //set value function call
+  setTextElement("rhombus-area", rhombusArea);
+}
+
+//--------Pentagon------------
+
+function calculatePentagonArea() {
+  const p = getInputValue("pentagon-p");
+  const h = getInputValue("pentagon-height");
+
+  //cal
+
+  const pentagonArea = 0.5 * p * h;
+
+  //set value show
+  setTextElement("pentagon-area", pentagonArea);
+}
+
+//------------Ellipse-----
+
+function calculateEllipseArea() {
+  const a = getInputValue("ellipse-a");
+  const b = getInputValue("ellipse-b");
+
+  //cal
+  const ellipseArea = Math.PI * a * b;
+
+  // set value
+  setTextElement("ellipse-area", ellipseArea);
+}

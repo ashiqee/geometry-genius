@@ -89,7 +89,7 @@
               </div>
             </div>
           </div>
-          <!-- card-three    n n-->
+          <!-- parallelogram card-three    n n-->
           <div class="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
             <div class="card-body text-center">
@@ -124,11 +124,120 @@
               </div>
             </div>
           </div>
+          <!-- Rhombus card-four    n n-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Rhombus</h2>
+              <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+              <p>
+                <span>d<sub>1</sub> = </span>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="0"
+                  type="text"
+                  name=""
+                  id="rhombus-d1" />
+                <span class="pr-2">cm</span>
+                <span>d<sub>2</sub> = </span>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="0"
+                  type="text"
+                  name=""
+                  id="rhombus-d2" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="rhombus-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions justify-center mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateRhombusArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon card-five    n n-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Pentagon</h2>
+              <p>Area (A) = 0.5 x p x b</p>
+              <p>
+                <span>p = </span>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="b"
+                  type="text"
+                  name=""
+                  id="pentagon-p" />
+                <span class="pr-2">cm</span>
+
+                <span>b = </span>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="h"
+                  type="text"
+                  name=""
+                  id="pentagon-height" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="pentagon-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions justify-center mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculatePentagonArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse card-Six    n n-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Ellipse</h2>
+              <p>Area (A) = &pi;ab</p>
+              <p>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="a"
+                  type="text"
+                  name=""
+                  id="ellipse-a" />
+                <span class="pr-2">cm</span>
+
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="b"
+                  type="text"
+                  name=""
+                  id="ellipse-b" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="ellipse-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions justify-center mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateEllipseArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- area calculator  -->
         <div class="text-4xl w-[400px] shadow-sm"><h2>Area Calculate</h2></div>
       </div>
     </main>
+    <script src="JS/utilites.js"></script>
     <script src="JS/area-calculator.js"></script>
   </body>
 </html>
