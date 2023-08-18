@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry genius</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header></header>
+    <main class="mt-20">
+      <!-- container  -->
+      <div class="flex flex-col lg:flex-row mx-auto">
+        <!-- shape Container  -->
+        <div
+          class="flex-1 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Triangle card-one   -->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Triangle</h2>
+              <p>Area (A) = 0.5 X b X h</p>
+              <p>
+                <input
+                  class="w-12 border bg-slate-200 p-1 rounded-sm"
+                  placeholder="base"
+                  type="text"
+                  name=""
+                  id="triangle-base" />
+                <span class="pr-2">cm</span>
+
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="height"
+                  type="text"
+                  name=""
+                  id="triangle-height" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="triangle-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle card-Two    n n-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Rectangle</h2>
+              <p>Area (A) = W X I</p>
+              <p>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="w"
+                  type="text"
+                  name=""
+                  id="rectangle-width" />
+                <span class="pr-2">cm</span>
+
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="l"
+                  type="text"
+                  name=""
+                  id="rectangle-length" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="rectangle-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions justify-center mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateRectangleArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card-three    n n-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
+            <div class="card-body text-center">
+              <h2 class="text-3xl text-center">Parallelogram</h2>
+              <p>Area (A) = b x h</p>
+              <p>
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="b"
+                  type="text"
+                  name=""
+                  id="" />
+                <span class="pr-2">cm</span>
+
+                <input
+                  class="w-12 bg-slate-200 p-1 rounded-sm"
+                  placeholder="h"
+                  type="text"
+                  name=""
+                  id="" />
+                <span>cm</span>
+              </p>
+              <p class="text-left">
+                Area: <span id="rectangle-area">0</span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions justify-center mt-4">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateParallelogramArea()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- area calculator  -->
+        <div class="text-4xl w-[400px] shadow-sm"><h2>Area Calculate</h2></div>
+      </div>
+    </main>
+    <script src="JS/area-calculator.js"></script>
+  </body>
+</html>
