@@ -35,11 +35,21 @@ function addToCalculationEntry(areaType, area) {
   const count = calculateEntry.childElementCount;
   const p = document.createElement("p");
   p.classList.add("my-4");
-  p.innerHTML = ` ${count + 1}. ${areaType} ${area} cm<sup>2</sup>
+  p.innerHTML = ` ${count + 1}. ${areaType} ${area} cm<sup>2</sup> 
  <button
                   class="btn btn-sm btn-success"
-                  onclick="convertToMeter()">
-                  Convert
+                  onclick="convertToMeter(${area})">
+                  Convert m<sup>2</sup>
                 </button>`;
   calculateEntry.appendChild(p);
+}
+
+//Convert button
+
+function convertToMeter(area) {
+  const meter = area * 0.01;
+
+  const meterText = document.getElementById("meter-element");
+  meterText.innerText = meter;
+  console.log(meter);
 }

@@ -20,6 +20,7 @@ function calculateTriangleArea() {
   // show view area value
   const textElement = document.getElementById("triangle-area");
   textElement.innerText = triangleArea;
+  addToCalculationEntry("Triangle", triangleArea);
 }
 
 //-------------- calculateRectangleArea---------------------
@@ -29,7 +30,7 @@ function calculateRectangleArea() {
   const widthField = document.getElementById("rectangle-width");
   const widthValueText = widthField.value;
   const width = parseFloat(widthValueText);
-  console.log(width);
+  // console.log(width);
 
   // get rectangle Length
   const lengthField = document.getElementById("rectangle-length");
@@ -44,11 +45,12 @@ function calculateRectangleArea() {
 
   //calculate rectangle area
   const rectangleArea = width * length;
-  console.log(rectangleArea);
+  // console.log(rectangleArea);
 
   //show rectangle value
   const textElement = document.getElementById("rectangle-area");
   textElement.innerText = rectangleArea;
+  addToCalculationEntry("Rectangle", rectangleArea);
 }
 
 //-----------ParallelogramArea-------------
@@ -96,6 +98,7 @@ function calculateRhombusArea() {
 
   //set value function call
   setTextElement("rhombus-area", rhombusArea);
+  addToCalculationEntry("Rhombus", rhombusArea);
 }
 
 //--------Pentagon------------
@@ -114,6 +117,7 @@ function calculatePentagonArea() {
 
   //set value show
   setTextElement("pentagon-area", pentagonArea);
+  addToCalculationEntry("Pentagon", pentagonArea);
 }
 
 //------------Ellipse-----
