@@ -35,7 +35,12 @@ function calculateRectangleArea() {
   const lengthField = document.getElementById("rectangle-length");
   const lengthValueText = lengthField.value;
   const length = parseFloat(lengthValueText);
-  console.log(length);
+
+  //validation
+  if (isNaN(width) || isNaN(length)) {
+    alert("please insert a number");
+    return;
+  }
 
   //calculate rectangle area
   const rectangleArea = width * length;
@@ -59,6 +64,10 @@ function calculateParallelogramArea() {
   const heightValueText = heightField.value;
   const height = parseFloat(heightValueText);
 
+  if (isNaN(base) || isNaN(height)) {
+    alert("Please insert a Number");
+    return;
+  }
   // calculate
 
   const parallelogramArea = base * height;
@@ -66,6 +75,7 @@ function calculateParallelogramArea() {
   // show the value
   const textElement = document.getElementById("parallelogram-area");
   textElement.innerText = parallelogramArea;
+  addToCalculationEntry("parallelogram", parallelogramArea);
 }
 
 //---Rhombus cal---------
@@ -74,6 +84,11 @@ function calculateRhombusArea() {
   const d1 = getInputValue("rhombus-d1");
 
   const d2 = getInputValue("rhombus-d2");
+
+  if (isNaN(d1) || isNaN(d2)) {
+    alert("Please insert valid number");
+    return;
+  }
 
   //calculate
 
@@ -89,6 +104,10 @@ function calculatePentagonArea() {
   const p = getInputValue("pentagon-p");
   const h = getInputValue("pentagon-height");
 
+  if (isNaN(p) || isNaN(h)) {
+    alert("Please insert valid number");
+    return;
+  }
   //cal
 
   const pentagonArea = 0.5 * p * h;
@@ -102,10 +121,15 @@ function calculatePentagonArea() {
 function calculateEllipseArea() {
   const a = getInputValue("ellipse-a");
   const b = getInputValue("ellipse-b");
-
+  if (isNaN(a) || isNaN(b)) {
+    alert("Please insert valid number");
+    return;
+  }
   //cal
   const ellipseArea = Math.PI * a * b;
+  const ellipseAreaTwoDecimal = ellipseArea.toFixed(2);
 
   // set value
-  setTextElement("ellipse-area", ellipseArea);
+  setTextElement("ellipse-area", ellipseAreaTwoDecimal);
+  addToCalculationEntry("Ellipse", ellipseAreaTwoDecimal);
 }

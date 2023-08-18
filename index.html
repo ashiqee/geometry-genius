@@ -29,7 +29,7 @@
                 <input
                   class="w-12 border bg-slate-200 p-1 rounded-sm"
                   placeholder="base"
-                  type="text"
+                  type="number"
                   name=""
                   id="triangle-base" />
                 <span class="pr-2">cm</span>
@@ -37,7 +37,7 @@
                 <input
                   class="w-12 bg-slate-200 p-1 rounded-sm"
                   placeholder="height"
-                  type="text"
+                  type="number"
                   name=""
                   id="triangle-height" />
                 <span>cm</span>
@@ -234,7 +234,10 @@
           </div>
         </div>
         <!-- area calculator  -->
-        <div class="text-4xl w-[400px] shadow-sm"><h2>Area Calculate</h2></div>
+        <div class="w-[400px] shadow-sm text-center mx-auto mt-15">
+          <h2 class="text-4xl">Area Calculate</h2>
+          <div id="calculation-entry"></div>
+        </div>
       </div>
     </main>
     <script src="JS/utilites.js"></script>
